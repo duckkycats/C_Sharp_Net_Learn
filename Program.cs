@@ -6,66 +6,49 @@ namespace HelloWorlds
     {
         static void Main(String[] arges)
         {
-            // int myInt = 5;
-            // int mySecondInt = 10;
+            int myInt = 5;
+            int mySecondInt = 10;
 
-            // Console.WriteLine(myInt.Equals(mySecondInt));
-            // Console.WriteLine(myInt.Equals(mySecondInt / 2));
+            if(myInt < mySecondInt)
+            {
+                myInt += 10;
+            }
 
-            // Console.WriteLine(myInt != mySecondInt);
-            // Console.WriteLine(myInt == mySecondInt / 2);
-            // Console.WriteLine(myInt != mySecondInt / 3);
-
-            // Console.WriteLine(myInt >= mySecondInt);
-            // Console.WriteLine(myInt >= mySecondInt / 2);
-            // Console.WriteLine(myInt > mySecondInt);
-            // Console.WriteLine(myInt > mySecondInt - 6);
-            // Console.WriteLine(myInt <= mySecondInt);
-            // Console.WriteLine(myInt < mySecondInt);
-
-            Console.WriteLine(5 > 10 && 5 < 10);
-
-            // myInt++;
             // Console.WriteLine(myInt);
 
-            // myInt += 7;
-            // Console.WriteLine(myInt);
+            string myCow = "Cows";
+            // string myCapitalizedCow = "cow";
 
-            // myInt -= 8;
-            // Console.WriteLine(myInt);
-            
-            // Console.WriteLine(myInt * mySecondInt);
+            // if (myCow == myCapitalizedCow)
+            // {
+            //     Console.WriteLine("Equal");
+            //     // cow = cow
+            // }
 
-            // Console.WriteLine(mySecondInt / myInt);
+            // else if (myCow == myCapitalizedCow.ToLower())
+            // {
+            //     Console.WriteLine("Equal without case sensitivity");
+            //     Console.WriteLine("get " + myCapitalizedCow.ToLower());
+            //     // cow = Cow -> cow
+            // }
+            // else 
+            // {
+            //     Console.WriteLine("Not Equal");
+            //     // Cows
+            // }
 
-            // Console.WriteLine(mySecondInt + myInt);
-
-            // Console.WriteLine(myInt - mySecondInt);
-
-            // Console.WriteLine(5 + 5 * 10);
-
-            // Console.WriteLine(Math.Pow(5,4));
-
-            // Console.WriteLine(Math.Sqrt(25));
-
-            // string myString = "test";
-
-            // Console.WriteLine(myString);
-
-            // myString += ". second part.";
-
-            // Console.WriteLine(myString);
-    
-            // myString = myString += " \"thrid\\ part.";
-
-            // Console.WriteLine(myString);
-
-            // string[] myStringArr = myString.Split(". ");
-            // Console.WriteLine(myStringArr[0]);
-            // Console.WriteLine(myStringArr[1]);
-
-
-
+            switch (myCow)
+            {
+                case "cow":
+                    Console.WriteLine("Lowercase");
+                    break;
+                case "Cow":
+                    Console.WriteLine("Capitalized");
+                    break;
+                default: 
+                    Console.WriteLine("Default Ran");
+                    break;       
+            }
 
         }
     }
