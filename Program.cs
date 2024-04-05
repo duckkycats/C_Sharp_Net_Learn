@@ -6,49 +6,106 @@ namespace HelloWorlds
     {
         static void Main(String[] arges)
         {
-            int myInt = 5;
-            int mySecondInt = 10;
+            int[] intsToCompress = new int[] {10, 15, 20, 25, 30, 12, 34};
 
-            if(myInt < mySecondInt)
+            // ____________________ Method 1st ____________________
+
+            // DateTime startTime = DateTime.Now;
+
+            int totalValue = 0;
+
+            foreach(int intForCompression in intsToCompress)
             {
-                myInt += 10;
+                if (intForCompression > 20)
+                {
+                 totalValue += intForCompression;
+                }
             }
 
-            // Console.WriteLine(myInt);
+            Console.WriteLine(totalValue);
 
-            string myCow = "Cows";
-            // string myCapitalizedCow = "cow";
 
-            // if (myCow == myCapitalizedCow)
+            // int totalValue = intsToCompress[0] + intsToCompress[1] 
+            // + intsToCompress[2] + intsToCompress[3]
+            // + intsToCompress[4] + intsToCompress[5]
+            // + intsToCompress[6];
+
+            // Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
+
+            // Console.WriteLine("no. 1 -> " + totalValue);
+
+            // ____________________ Method 2nd ____________________
+            // totalValue = 0;
+
+            // startTime = DateTime.Now;
+
+            // for (int i = 0; i < intsToCompress.Length; i++)
             // {
-            //     Console.WriteLine("Equal");
-            //     // cow = cow
+            //     totalValue += intsToCompress[i];
             // }
 
-            // else if (myCow == myCapitalizedCow.ToLower())
+            // Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
+
+            // Console.WriteLine("no. 2 -> " + totalValue);
+
+            // ____________________ Method 3rd ____________________
+
+            // totalValue = 0;
+            // startTime = DateTime.Now;
+
+            // foreach(int intForCompression in intsToCompress)
             // {
-            //     Console.WriteLine("Equal without case sensitivity");
-            //     Console.WriteLine("get " + myCapitalizedCow.ToLower());
-            //     // cow = Cow -> cow
-            // }
-            // else 
-            // {
-            //     Console.WriteLine("Not Equal");
-            //     // Cows
+            //     totalValue += intForCompression;
             // }
 
-            switch (myCow)
-            {
-                case "cow":
-                    Console.WriteLine("Lowercase");
-                    break;
-                case "Cow":
-                    Console.WriteLine("Capitalized");
-                    break;
-                default: 
-                    Console.WriteLine("Default Ran");
-                    break;       
-            }
+            // Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
+
+            // Console.WriteLine("no. 3 -> " + totalValue);
+
+            // // ____________________ Method 4th ____________________
+
+            // totalValue = 0;
+            // startTime = DateTime.Now;
+
+            // int index = 0;
+
+            // while(index < intsToCompress.Length)
+            // {
+            //     totalValue += intsToCompress[index];
+            //     index++;
+            // }
+
+            // // while -> ถ้า true มันจะรันเรื่อย ๆ จนกว่าจะเจอ false แล้วถงหลุดออกจากวงจร
+
+            // Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
+
+            // Console.WriteLine("no. 4 -> " + totalValue);
+
+            // // ____________________ Method 5th ____________________
+
+            // totalValue = 0;
+            // startTime = DateTime.Now;
+
+            // // index = 0;
+
+            // do
+            // {
+            //     index++;
+            // } while(index < intsToCompress.Length);
+
+            // // do -> ถ้า false มันจะรันเรื่อย ๆ จนกว่าจะเจอ true (while) แล้วถึงหลุดออกจากวงจร
+
+            // Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
+
+            // Console.WriteLine("no. 5 -> " + totalValue);
+
+            // totalValue = 0;
+
+            // totalValue = intsToCompress.Sum();
+
+            // Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
+
+            // Console.WriteLine("no. 5 -> " + totalValue);
 
         }
     }
