@@ -39,9 +39,7 @@ namespace HelloWorlds
                 VideoCard = "RTX 2060"
             };
 
-            // 10 ปีผ่านไป
             myComputer.HasWifi = false;
-
             Console.WriteLine(myComputer.Motherboard);
             Console.WriteLine(myComputer.HasWifi);
             Console.WriteLine(myComputer.ReleaseDate);
