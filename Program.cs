@@ -11,29 +11,49 @@ namespace HelloWorld
         public static void Main(String[] args)
         {
 
-            // ____ เอาไว้เชื่อม Database ____
+            // ____ Connected Database ____
             string connectionString = "Server=localhost;Database=DotNetCourseDatabase;TrustServerCertificate=true;Trusted_Connection=true;";
 
             IDbConnection dbConnection = new SqlConnection(connectionString);
 
-            string sqlCommand = "SELECT GETDATE()";
-
-            // return ค่าออกมา
-            DateTime rightNow = dbConnection.QuerySingle<DateTime>(sqlCommand);
+            // return 
+            DateTime rightNow = dbConnection.QuerySingle<DateTime>("SELECT GETDATE()");
 
             Console.WriteLine(rightNow);
             // ___ End Connected Database ___
             
 
-            // Computer myComputer = new Computer()
-            // {
-            //     Motherboard = "Z690",
-            //     HasWifi = true,
-            //     HasLTE = false,
-            //     ReleaseDate = DateTime.Now,
-            //     Price = 973.87m,
-            //     VideoCard = "RTX 2060"
-            // };
+            Computer myComputer = new Computer()
+            {
+                Motherboard = "Z690",
+                HasWifi = true,
+                HasLTE = false,
+                ReleaseDate = DateTime.Now,
+                Price = 973.87m,
+                VideoCard = "RTX 2060"
+            };
+
+            string sql = @"INSERT INTO TutorialAppSchema.Computer (
+                Motherboard,
+                HasWifi,
+                HasLTE,
+                ReleaseDate,
+                Price,
+                VideoCard
+            ) VALUES ('" + myComputer.Motherboard
+                + "','" + myComputer.HasWifi
+                + "','" + myComputer.HasLTE
+                + "','" + myComputer.ReleaseDate
+                + "','" + myComputer.Price
+                + "','" + myComputer.VideoCard
+            + "')";
+
+            Console.WriteLine(sql);
+
+            int result = dbConnection.Execute(sql);
+
+            Console.WriteLine(result);
+
 
             // myComputer.HasWifi = false;
             // Console.WriteLine(myComputer.Motherboard);
