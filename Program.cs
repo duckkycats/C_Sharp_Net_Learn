@@ -19,10 +19,10 @@ namespace HelloWorld
             // return 
             DateTime rightNow = dbConnection.QuerySingle<DateTime>("SELECT GETDATE()");
 
-            Console.WriteLine(rightNow);
+            // Console.WriteLine(rightNow.ToString());
             // ___ End Connected Database ___
             
-
+            // Mock ข้อมูล = จำลองข้อมูล = ข้อมูลต้นแบบ
             Computer myComputer = new Computer()
             {
                 Motherboard = "Z690",
@@ -48,11 +48,37 @@ namespace HelloWorld
                 + "','" + myComputer.VideoCard
             + "')";
 
-            Console.WriteLine(sql);
+            // Console.WriteLine(sql);
 
             int result = dbConnection.Execute(sql);
 
-            Console.WriteLine(result);
+            // Console.WriteLine(result);
+
+            string sqlSelect = @"
+            SELECT
+                Computer.Motherboard,
+                Computer.HasWifi,
+                Computer.HasLTE,
+                Computer.ReleaseDate,
+                Computer.Price,
+                Computer.VideoCard
+             FROM TutorialAppSchema.Computer";
+            
+            IEnumerable<Computer> computers = dbConnection.Query<Computer>(sqlSelect);
+
+            Console.WriteLine("'Motherboard','HasWifi','HasLTE','ReleaseDate','Price','VideoCard'");
+
+            foreach(Computer singleCompter in computers)
+            {
+                Console.WriteLine("'" + myComputer.Motherboard
+                + "','" + myComputer.HasWifi
+                + "','" + myComputer.HasLTE
+                + "','" + myComputer.ReleaseDate
+                + "','" + myComputer.Price
+                + "','" + myComputer.VideoCard
+                + "'");
+                
+            }
 
 
             // myComputer.HasWifi = false;
