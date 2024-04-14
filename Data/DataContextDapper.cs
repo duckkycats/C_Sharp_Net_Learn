@@ -1,13 +1,22 @@
 using System.Data;
 using Dapper;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 
 namespace HelloWorld.Data
 {
     public class DataContextDapper
     {
+        // Dapper
+        // private IConfiguration _config;
+        private string _connectionString;
+        public DataContextDapper(IConfiguration config)
+        {
+            // _config = config;
+            _connectionString = config.GetConnectionString("DefaultConnection");
+        }
+
         // ____ Connected Database ____
-        private string _connectionString = "Server=localhost;Database=DotNetCourseDatabase;TrustServerCertificate=true;Trusted_Connection=true;";
 
         // Generic สามารถรับค่าตัวแปรประเภทเดียวแล้วส่งออกค่า return หลายประเภทได้
         public IEnumerable<T> LoadData<T>(string sql)

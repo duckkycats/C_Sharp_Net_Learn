@@ -67,3 +67,10 @@ D:\CodeLearning\dotnet-course-code\HelloWorld\bin\Debug\net8.0\runtimes\win\lib\
 D:\CodeLearning\dotnet-course-code\HelloWorld\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 D:\CodeLearning\dotnet-course-code\HelloWorld\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Runtime.Caching.dll
 D:\CodeLearning\dotnet-course-code\HelloWorld\obj\Debug\net8.0\HelloWorld.csproj.Up2Date
+D:\CodeLearning\dotnet-course-code\HelloWorld\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+D:\CodeLearning\dotnet-course-code\HelloWorld\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\CodeLearning\dotnet-course-code\HelloWorld\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+D:\CodeLearning\dotnet-course-code\HelloWorld\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\CodeLearning\dotnet-course-code\HelloWorld\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Physical.dll
+D:\CodeLearning\dotnet-course-code\HelloWorld\bin\Debug\net8.0\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\CodeLearning\dotnet-course-code\HelloWorld\bin\Debug\net8.0\appsettings.json

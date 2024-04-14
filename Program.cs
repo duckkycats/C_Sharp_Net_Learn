@@ -4,16 +4,21 @@ using Dapper;
 using HelloWorld.Data;
 using HelloWorld.Models;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+
 
 namespace HelloWorld
 {
     public class Program
     {
-        public static void Main(String[] args)
+        static void Main(String[] args)
         {
+            IConfiguration config = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json")
+                .Build();
 
-            DataContextDapper dapper = new DataContextDapper();
-            DataContextEF entityFramework = new DataContextEF();
+            DataContextDapper dapper = new DataContextDapper(config);
+            DataContextEF entityFramework = new DataContextEF(config);
 
             // return 
             DateTime rightNow = dapper.LoadDataSingle<DateTime>("SELECT GETDATE()");
