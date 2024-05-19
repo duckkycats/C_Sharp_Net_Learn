@@ -10,10 +10,14 @@ namespace HelloWorld.Data
         // Dapper
         // private IConfiguration _config;
         private string _connectionString;
+            #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public DataContextDapper(IConfiguration config)
+            #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             // _config = config;
+            #pragma warning disable CS8601 // Possible null reference assignment.
             _connectionString = config.GetConnectionString("DefaultConnection");
+            #pragma warning restore CS8601 // Possible null reference assignment.
         }
 
         // ____ Connected Database ____
