@@ -74,3 +74,4 @@ D:\CodeLearning\dotnet-course-code\HelloWorld\bin\Debug\net8.0\Microsoft.Extensi
 D:\CodeLearning\dotnet-course-code\HelloWorld\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Physical.dll
 D:\CodeLearning\dotnet-course-code\HelloWorld\bin\Debug\net8.0\Microsoft.Extensions.FileSystemGlobbing.dll
 D:\CodeLearning\dotnet-course-code\HelloWorld\bin\Debug\net8.0\appsettings.json
+D:\CodeLearning\dotnet-course-code\HelloWorld\bin\Debug\net8.0\Newtonsoft.Json.dll
